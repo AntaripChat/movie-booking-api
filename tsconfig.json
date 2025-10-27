@@ -1,0 +1,47 @@
+{
+  "compilerOptions": {
+    // File Layout
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    // Environment Settings - CHANGED for Express
+    "module": "CommonJS",
+    "target": "ES2020",
+    "lib": ["ES2020"],
+    "types": ["node"],
+
+    // Other Outputs
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    // Stricter Typechecking Options
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+
+    // Style Options - ENABLED for better code quality
+    "noImplicitReturns": true,
+    "noImplicitOverride": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+
+    // Recommended Options - ADJUSTED
+    "strict": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+
+    // Remove React-specific options
+    // "jsx": "react-jsx", // REMOVE THIS
+    // "verbatimModuleSyntax": true, // REMOVE - conflicts with CommonJS
+    // "isolatedModules": true, // REMOVE - not needed for backend
+    // "noUncheckedSideEffectImports": true, // REMOVE - experimental
+    // "moduleDetection": "force" // REMOVE - experimental
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", "**/*.test.ts"]
+}
