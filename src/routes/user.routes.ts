@@ -1,6 +1,7 @@
-import { welcomeUser } from "../controller/user.controller";
+import { signUpUser,signInUser } from "../controller/user.controller";
 import { Express } from "express";
 
 export const registerUserRoutes = (app: Express) => {
-    app.get('/', welcomeUser);
+    app.post('/sign', signUpUser);
+    app.post('/signin', signInUser);
 }
